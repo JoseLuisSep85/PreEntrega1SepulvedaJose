@@ -1,8 +1,8 @@
 import React from 'react'
 
-function ItemListContainer() {
+function ItemListContainer({greeting}) {
   return (
-    <div>ItemListContainer</div>
+    <h2 className='flex justify-center items-center'>{greeting}</h2>
   )
 }
 

@@ -7,7 +7,7 @@ function App() {
 
     <div className="App">
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer greeting={'Bienvenidos a TecnoPlay'}/>
       <Footer/>
     </div>
   );
