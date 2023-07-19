@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import { getProductos } from './asyncMock'
-import ItemCount from './ItemCount'
+import { getProductos, getProductosCategoria } from './asyncMock'
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({greeting}) => {
   const [productos, setProductos] = useState([])
+  const {categoriaId} = useParams()
+
   useEffect(() => {
-    getProductos()
+    const asyncFunc = categoriaId ? getProductosCategoria : getProductos
+    asyncFunc(categoriaId)
       .then(response => {
         setProductos(response)
       })
       .catch(error => {
         console.error(error)
       })
-  })
+  },[categoriaId])
 
-  const onAdd = (props) => {
-    console.log("Cantidad Agregada", props);
-  }
+  
 
   return (
     <div>
@@ -25,7 +26,7 @@ const ItemListContainer = ({greeting}) => {
         {greeting}
       </h2>
       <ItemList productos={productos}/>
-      <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+      
     </div>
   )
 }

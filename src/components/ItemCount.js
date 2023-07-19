@@ -11,7 +11,7 @@ function ItemCount({stock, initial, onAdd}) {
     }
 
     const handleQuitar = () => {
-        if(cantidad > 0) {
+        if(cantidad > 1) {
             setCantidad(cantidad - 1)
         }
     }
