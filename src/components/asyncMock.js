@@ -144,11 +144,11 @@ const productos = [
     })
  }
 
- export const getProductoId =(id) => {
+ export const getProductoId =(productoId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const producto = (productos.find(prod => prod.id === id))
-            resolve(producto)
+            resolve(productos.find(prod => prod.id === productoId))
+        
         }, 2000);
     })
  }

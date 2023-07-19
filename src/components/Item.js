@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Item = ({id, nombre, precio, imagen, cantidad, categoria, descripcion}) => {
+const Item = ({id, nombre, precio, imagen, categoria}) => {
   return (
     <div className='productoItem border flex flex-wrap flex-col w-80 rounded-md items-center p-3 text-center'>
       <picture>
@@ -15,7 +15,7 @@ const Item = ({id, nombre, precio, imagen, cantidad, categoria, descripcion}) =>
         <p className='info mb-8'>Precio: ${precio}</p>
       </section>
       <footer className='itemFooter mb-8'>
-        <Link to={`/item/${id}`} className='option bg-sky-600 rounded-lg h-12 p-3 text-white hover:bg-sky-500'>Ver detalle</Link>
+      <Link to={`/item/${id}`}>Ver detalles</Link>
       </footer>
     </div>
   )

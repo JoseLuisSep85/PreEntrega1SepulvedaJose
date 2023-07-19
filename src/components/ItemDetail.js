@@ -1,12 +1,12 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-const onAdd = (props) => {
-    console.log("Cantidad Agregada", props);
+const onAdd = () => {
+
   }
-const ItemDetail = ({id, nombre, precio, imagen, cantidad, categoria, descripcion}) => {
+const ItemDetail = ({ nombre, precio, imagen, cantidad, categoria, descripcion}) => {
   return (
-    <div className='border flex flex-wrap flex-col w-1/4 rounded-md items-center p-3 text-center m-auto mb-5'>
+    <div className='border flex flex-wrap flex-col w-1/4 rounded-md items-center p-3 text-center m-auto mb-5 mt-5'>
         
         <picture>
             <img src={imagen} alt={nombre} />
