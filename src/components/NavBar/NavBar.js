@@ -1,6 +1,6 @@
 import React from 'react'
-import TecnoPlay_Logo from '../assets/TecnoPlay_Logo.svg'
-import CartWidget from './CartWidget'
+import TecnoPlay_Logo from '../../assets/img/TecnoPlay_Logo.svg'
+import CartWidget from '../CartWidget/CartWidget'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
